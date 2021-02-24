@@ -28,7 +28,7 @@ class MiAplicacion extends StatelessWidget {
     );
   }
 
-  losTresCuadrados() {
+  Widget losTresCuadrados() {
     // A partir del return entramos a la interfaz
     return Row(
       mainAxisAlignment: MainAxisAlignment.spaceAround,
@@ -42,11 +42,11 @@ class MiAplicacion extends StatelessWidget {
     );
   }
 
-  cuadrado(Color colorPrin) {
+  Widget cuadrado(Color colorPrincipal) {
     return Container(
       height: 100,
       width: 100,
-      color: colorPrin,
+      color: colorPrincipal,
     );
   }
 }
