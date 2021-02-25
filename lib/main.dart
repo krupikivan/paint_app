@@ -9,19 +9,44 @@ class MiAplicacion extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'Flutter Demo',
       home: Scaffold(
         backgroundColor: Colors.cyan,
         body: SafeArea(
           child: Container(
-            margin: EdgeInsets.symmetric(vertical: 180),
-            height: 150,
-            width: 150,
-            color: Colors.white,
-            child: Text('Hola!'),
+            height: 250, // Los cuadrados ocupan 200 px
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.spaceAround,
+              children: [
+                // Estos son los hijos de la columna
+                losTresCuadrados(),
+                losTresCuadrados(),
+              ],
+            ),
           ),
         ),
       ),
+    );
+  }
+
+  losTresCuadrados() {
+    // A partir del return entramos a la interfaz
+    return Row(
+      mainAxisAlignment: MainAxisAlignment.spaceAround,
+      // crossAxisAlignment: CrossAxisAlignment.center,
+      children: [
+        // Estos son los hijos de la fila
+        cuadrado(Colors.red),
+        cuadrado(Colors.blue),
+        cuadrado(Colors.yellow),
+      ],
+    );
+  }
+
+  cuadrado(Color colorPrin) {
+    return Container(
+      height: 100,
+      width: 100,
+      color: colorPrin,
     );
   }
 }
